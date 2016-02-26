@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Текстовое поле</title>
+	<style>
+
+	.t2 {
+		position:relative;
+		left: 450px;
+		bottom: 551px;
+	}
+
+	.t3 {
+		position:relative;
+		left: 900px;
+		bottom: 1102px;
+	}
+	</style>
+</head>
+<body>
+	<p align="center"><input type="button" id="btnCalculate" value="Calculate"></input><p>
+	<p class="t1"><textarea rows="35" cols="55" id='txt1' value=""></textarea></p>
+	<p class="t2"><textarea rows="35" cols="55" id='txt2'></textarea></p>
+	<p class="t3"><textarea rows="35" cols="55" id="txt3"></textarea></p>
+	<script>
+		var btnCalc = document.getElementById("btnCalculate");
+		btnCalc.onclick = function start () {
+			var txt1 = document.getElementById("txt1");
+			var text1 = txt1.value;
+			var txt2 = document.getElementById("txt2");
+			var text2 = txt2.value;
+			var txt3 = document.getElementById("txt3");
+		
+			function getStr(indexA, indexB) {
+
+	
+  			}
+
+  			var dataBasCap = [{bas:[], cap:[], loc:[], tour:[]}]
+		var lastBas1 = text1.indexOf("Base"); 
+		while (lastBas1 != -1) { 
+			dataBasCap[0].bas.push(lastBas1); 
+			var lastCap1 = text1.indexOf("Capture", lastBas1); 
+			dataBasCap[0].cap.push(lastCap1);
+			lastBas1 = text1.indexOf("Base", lastCap1); 
+		}
+
+		for (var i=0; i<dataBasCap[0].bas.length; i++) {
+			var sub = text1.substring(dataBasCap[0].bas[i], dataBasCap[0].cap[i]);
+			dataBasCap[0].loc.push(sub);
+		}
+
+		for (var i=0; i<dataBasCap[0].bas.length; i++) {
+			var sub = text1.substring(dataBasCap[0].cap[i], dataBasCap[0].bas[i+1]);
+			dataBasCap[0].tour.push(sub);
+		}
+
+		
+		var data = [{c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}];
+
+
+		var lastT1 = dataBasCap[0].tour[0].indexOf("Tour"); 
+		while (lastT1 != -1) { 
+			data[0].t.push(lastT1); 
+			var lastZ1 = dataBasCap[0].tour[0].indexOf("[", lastT1); 
+			data[0].z.push(lastZ1); 
+			lastT1 = dataBasCap[0].tour[0].indexOf("Tour", lastZ1); 
+		}
+
+		for (var i=0; i<data[0].t.length; i++) {
+			var sub = dataBasCap[0].tour[0].substring(data[0].t[i], data[0].z[i]);
+			data[0].tours.push(sub);
+		}
+
+		var lastT2 = dataBasCap[0].tour[1].indexOf("Tour");
+		while (lastT2 != -1) { 
+			data[1].t.push(lastT2); 
+			var lastZ2 = dataBasCap[0].tour[1].indexOf("[", lastT2); 
+			data[1].z.push(lastZ2); 
+			lastT2 = dataBasCap[0].tour[1].indexOf("Tour", lastZ2); 
+		}
+
+		for (var i=0; i<data[1].t.length; i++) {
+			var sub = dataBasCap[0].tour[1].substring(data[1].t[i], data[1].z[i]);
+			data[1].tours.push(sub);
+		}
+
+		var lastT3 = dataBasCap[0].tour[2].indexOf("Tour");
+		while (lastT3 != -1) { 
+			data[2].t.push(lastT3); 
+			var lastZ3 = dataBasCap[0].tour[2].indexOf("[", lastT3); 
+			data[2].z.push(lastZ3); 
+			lastT3 = dataBasCap[0].tour[2].indexOf("Tour", lastZ3); 
+		}
+
+		for (var i=0; i<data[2].t.length; i++) {
+			var sub = dataBasCap[0].tour[2].substring(data[2].t[i], data[2].z[i]);
+			data[2].tours.push(sub);
+		}
+
+
+		var lastT4 = dataBasCap[0].tour[3].indexOf("Tour");
+		while (lastT4 != -1) { 
+			data[3].t.push(lastT4); 
+			var lastZ4 = dataBasCap[0].tour[3].indexOf("[", lastT4); 
+			data[3].z.push(lastZ4); 
+			lastT4 = dataBasCap[0].tour[3].indexOf("Tour", lastZ4); 
+		}
+
+		for (var i=0; i<data[3].t.length; i++) {
+			var sub = dataBasCap[0].tour[3].substring(data[3].t[i], data[3].z[i]);
+			data[3].tours.push(sub);
+		}
+
+		var lastT5 = dataBasCap[0].tour[4].indexOf("Tour");
+		while (lastT5 != -1) { 
+			data[4].t.push(lastT5); 
+			var lastZ5 = dataBasCap[0].tour[4].indexOf("[", lastT5); 
+			data[4].z.push(lastZ5); 
+			lastT5 = dataBasCap[0].tour[4].indexOf("Tour", lastZ5); 
+		}
+
+		for (var i=0; i<data[4].t.length; i++) {
+			var sub = dataBasCap[0].tour[4].substring(data[4].t[i], data[4].z[i]);
+			data[4].tours.push(sub);
+		}
+
+		var lastT6 = dataBasCap[0].tour[5].indexOf("Tour");
+		while (lastT6 != -1) { 
+			data[5].t.push(lastT6); 
+			var lastZ6 = dataBasCap[0].tour[5].indexOf("[", lastT6); 
+			data[5].z.push(lastZ6); 
+			lastT6 = dataBasCap[0].tour[5].indexOf("Tour", lastZ6); 
+		}
+
+		for (var i=0; i<data[5].t.length; i++) {
+			var sub = dataBasCap[0].tour[5].substring(data[5].t[i], data[5].z[i]);
+			data[5].tours.push(sub);
+		}
+
+		var lastT7 = dataBasCap[0].tour[6].indexOf("Tour");
+		while (lastT7 != -1) { 
+			data[6].t.push(lastT7); 
+			var lastZ7 = dataBasCap[0].tour[6].indexOf("[", lastT7); 
+			data[6].z.push(lastZ7); 
+			lastT7 = dataBasCap[0].tour[6].indexOf("Tour", lastZ7); 
+		}
+
+		for (var i=0; i<data[6].t.length; i++) {
+			var sub = dataBasCap[0].tour[6].substring(data[6].t[i], data[6].z[i]);
+			data[6].tours.push(sub);
+		}
+
+		var lastT8 = dataBasCap[0].tour[7].indexOf("Tour");
+		while (lastT8 != -1) { 
+			data[7].t.push(lastT8); 
+			var lastZ8 = dataBasCap[0].tour[7].indexOf("[", lastT8); 
+			if (lastZ8 == -1) {
+				break;
+			}
+			else {
+				data[7].z.push(lastZ8); 
+				lastT8 = dataBasCap[0].tour[7].indexOf("Tour", lastZ8); 
+			}
+		}
+
+		for (var i=0; i<data[7].t.length; i++) {
+			var sub = dataBasCap[0].tour[7].substring(data[7].t[i], data[7].z[i]);
+			data[7].tours.push(sub);
+		}
+
+
+		var lastC1 = dataBasCap[0].tour[0].indexOf("Clan");
+		while (lastC1 != -1) {
+			data[0].c.push(lastC1);
+			var lastS1 = dataBasCap[0].tour[0].indexOf("[", lastC1);
+			data[0].s.push(lastS1);
+			lastC1 = dataBasCap[0].tour[0].indexOf("Clan", lastS1);
+		}
+
+		for (var i=0; i<data[0].c.length; i++) {
+			var sub = dataBasCap[0].tour[0].substring(data[0].c[i], data[0].s[i]);
+			data[0].clans.push(sub);
+		}
+
+
+		var lastC2 = dataBasCap[0].tour[1].indexOf("Clan");
+		while (lastC2 != -1) {
+			data[1].c.push(lastC2);
+			var lastS2 = dataBasCap[0].tour[1].indexOf("[", lastC2);
+			data[1].s.push(lastS2);
+			lastC2 = dataBasCap[0].tour[1].indexOf("Clan", lastS2);
+		}
+
+		for (var i=0; i<data[1].c.length; i++) {
+			var sub = dataBasCap[0].tour[1].substring(data[1].c[i], data[1].s[i]);
+			data[1].clans.push(sub);
+		}
+
+		var lastC3 = dataBasCap[0].tour[2].indexOf("Clan");
+		while (lastC3 != -1) {
+			data[2].c.push(lastC3);
+			var lastS3 = dataBasCap[0].tour[2].indexOf("[", lastC3);
+			data[2].s.push(lastS3);
+			lastC3 = dataBasCap[0].tour[2].indexOf("Clan", lastS3);
+		}
+
+		for (var i=0; i<data[2].c.length; i++) {
+			var sub = dataBasCap[0].tour[2].substring(data[2].c[i], data[2].s[i]);
+			data[2].clans.push(sub);
+		}
+
+		var lastC4 = dataBasCap[0].tour[3].indexOf("Clan");
+		while (lastC4 != -1) {
+			data[3].c.push(lastC4);
+			var lastS4 = dataBasCap[0].tour[3].indexOf("[", lastC4);
+			data[3].s.push(lastS4);
+			lastC4 = dataBasCap[0].tour[3].indexOf("Clan", lastS4);
+		}
+
+		for (var i=0; i<data[3].c.length; i++) {
+			var sub = dataBasCap[0].tour[3].substring(data[3].c[i], data[3].s[i]);
+			data[3].clans.push(sub);
+		}
+
+		var lastC5 = dataBasCap[0].tour[4].indexOf("Clan");
+		while (lastC5 != -1) {
+			data[4].c.push(lastC5);
+			var lastS5 = dataBasCap[0].tour[4].indexOf("[", lastC5);
+			data[4].s.push(lastS5);
+			lastC5 = dataBasCap[0].tour[4].indexOf("Clan", lastS5);
+		}
+
+		for (var i=0; i<data[4].c.length; i++) {
+			var sub = dataBasCap[0].tour[4].substring(data[4].c[i], data[4].s[i]);
+			data[4].clans.push(sub);
+		}
+
+		var lastC6 = dataBasCap[0].tour[5].indexOf("Clan");
+		while (lastC6 != -1) {
+			data[5].c.push(lastC6);
+			var lastS6 = dataBasCap[0].tour[5].indexOf("[", lastC6);
+			data[5].s.push(lastS6);
+			lastC6 = dataBasCap[0].tour[5].indexOf("Clan", lastS6);
+		}
+
+		for (var i=0; i<data[5].c.length; i++) {
+			var sub = dataBasCap[0].tour[5].substring(data[5].c[i], data[5].s[i]);
+			data[5].clans.push(sub);
+		}
+
+		var lastC7 = dataBasCap[0].tour[6].indexOf("Clan");
+		while (lastC7 != -1) {
+			data[6].c.push(lastC7);
+			var lastS7 = dataBasCap[0].tour[6].indexOf("[", lastC7);
+			data[6].s.push(lastS7);
+			lastC7 = dataBasCap[0].tour[6].indexOf("Clan", lastS7);
+		}
+
+		for (var i=0; i<data[6].c.length; i++) {
+			var sub = dataBasCap[0].tour[6].substring(data[6].c[i], data[6].s[i]);
+			data[6].clans.push(sub);
+		}
+
+		var lastC8 = dataBasCap[0].tour[7].indexOf("Clan");
+		while (lastC8 != -1) {
+			data[7].c.push(lastC8);
+			var lastS8 = dataBasCap[0].tour[7].indexOf("[", lastC8);
+			data[7].s.push(lastS8);
+			lastC8 = dataBasCap[0].tour[7].indexOf("Clan", lastS8);
+		}
+
+		for (var i=0; i<data[7].c.length; i++) {
+			var sub = dataBasCap[0].tour[7].substring(data[7].c[i], data[7].s[i]);
+			data[7].clans.push(sub);
+		}
+
+
+		var tour2loseB = "Tour 2 loseBattle";
+		var tour2loseBM = "Tour 2 loseByMiss";
+		var tour2winB = "Tour 2 winBattle";
+		var tour3lose = "Tour 3 loseBattle";
+		var tour3winB = "Tour 3 winBattle";
+		var tour4king = "Tour 4 king";
+		var tour3king = "Tour 3 king";
+
+		var newowner = [];
+		var n = 0;
+		for (var j=0; j<data.length; j++) {
+			for (i=0; i<data[j].tours.length; i++) {
+				if (data[j].tours[i].indexOf(tour2loseB) != -1) {
+					var lose1 = " выбыли в первом туре";
+				}
+				else if (data[j].tours[i].indexOf(tour3lose) != -1) {
+					var lose2 = " выбыли во втором туре";
+				}
+
+				else if (data[j].tours[i].indexOf(tour2loseBM) != -1) {
+					var lose3 = " выбыли в первом туре по неявке";
+				}
+				
+				if(data[j].tours[i].indexOf("king") !=-1) {
+					newowner.push(data[j].clans[]);
+				}	
+			}
+		}
+
+
+
+
+			var location = 
+			[{
+				loc:dataBasCap[0].loc[0], 
+				oldowner:"Alcoholics", 
+				newowner:newowner[0], 
+				points:[{
+					url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+					name:"2stalker2", 
+					tour:lose1
+			    }, {
+					url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+					name:"ToxiCTeaM", 
+					tour:lose1
+				}, {
+					url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+					name:"Alcoholics", 
+					tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[1], 
+					oldowner:"LastHope", 
+					newowner:newowner[1],
+					points:[{
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"monster", 
+						tour:lose1
+					}, {
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"Pogranzastava", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[2], 
+					oldowner:"KILLERS", 
+					newowner:newowner[2],
+					points:[{
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"KILLERS", 
+						tour:lose1
+					}, {
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"6paTBa", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[3], 
+					oldowner:"FightClub", 
+					newowner:newowner[3],
+					points:[{
+						url:"http://forum.lsonline.ru/index.php?/topic/2629-made-in-ussr-красные/", 
+						name:"MadeinUSSR", 
+						tour:lose1
+					}, {
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"FightClub", 
+						tour:lose3
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/5396-lasthope/", 
+						name:"LastHope", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[4], 
+					oldowner:"MadeinUSSR", 
+					newowner:newowner[4],
+					points:[{
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"FightClub", 
+						tour:lose1
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/2629-made-in-ussr-красные/", 
+						name:"MadeinUSSR", 
+						tour:lose1
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/1324-клан-братва/", 
+						name:"6paTBa", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[5], 
+					oldowner:"MadeinUSSR", 
+					newowner:newowner[5],
+					points:[{
+						url:"http://forum.lsonline.ru/index.php?/topic/1324-клан-братва/", 
+						name:"6paTBa", 
+						tour:lose1
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/2629-made-in-ussr-красные/", 
+						name:"MadeinUSSR", 
+						tour:lose1
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/3414-revolution", 
+						name:"Revolution", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[6], 
+					oldowner:"6paTBa", 
+					newowner:newowner[6],
+					points:[{
+						url:"http://forum.lsonline.ru/index.php?/topic/4812-клан-red/", 
+						name:"RED", 
+						tour:lose1
+					}, {
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"3BEPCKueTaIIKu", 
+						tour:lose1
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/2629-made-in-ussr-красные/", 
+						name:"MadeinUSSR", 
+						tour:lose2
+				}]}, {
+					loc:dataBasCap[0].loc[7], 
+					oldowner:"BlackLegion", 
+					newowner:newowner[7],
+					points:[{
+						url:"https://www.youtube.com/watch?v=dQw4w9WgXcQ", 
+						name:"apocalypse", 
+						tour:lose2
+					}, {
+						url:"http://forum.lsonline.ru/index.php?/topic/6545-Клан-warzone2100/", 
+						name:"Warzone2100", 
+						tour:lose1
+				}]}];
+
+				var output = "";
+
+			for (var j=0; j<location.length; j++) {
+				var result = "";
+				for (var i=0; i<location[j].points.length; i++) {
+					result += "[*][url=" + location[j].points[i].url + "]" + location[j].points[i].name + "[/url] -" + location[j].points[i].tour + "[/*]\n";
+				}
+				
+				output+= "[size=5][b][url=http://ru.lost-sector.wikia.com/wiki/" + location[j].loc + "[/url][/b][/size]\nПрежний владелец: [color=#ffa500]" + location[j].oldowner + "[/color]\nНовый владелец: [color=#ffa500]" + location[j].newowner + "[/color]\nНа локацию записывались:\n[LIST]\n" + result + "[/LIST]\n";
+			}
+
+		}
+
+	</script>
+</body>
+</html>

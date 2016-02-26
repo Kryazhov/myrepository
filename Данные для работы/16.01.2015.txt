@@ -1,0 +1,276 @@
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Base Containers Yard Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Clan monster
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Clan LastHope
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[9	] CUSTOM MESSAGE: Tour 2 winByMiss
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[14	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[5	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[12	] CUSTOM MESSAGE: Clan Pogranzastava
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[57	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[17	] CUSTOM MESSAGE: Tour 3 loseBattle
+[1	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[0	] CUSTOM MESSAGE: Base Factory East Checkpoint Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Clan FightClub
+[46	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[8	] CUSTOM MESSAGE: Tour 2 loseByMiss
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Clan LastHope
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[18	] CUSTOM MESSAGE: Clan Alcoholics
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 winByMiss
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[13	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[4	] CUSTOM MESSAGE: Clan MadeinUSSR
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Tour 2 loseBattle
+[1	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[0	] CUSTOM MESSAGE: Base Cargoship Deck Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan 6paTBa
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[13	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[7	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[23	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan 2stalker2
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[17	] CUSTOM MESSAGE: Clan Alcoholics
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[7	] CUSTOM MESSAGE: Clan ToxiCTeaM
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[8	] CUSTOM MESSAGE: Base Construction Site Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Clan ToMaT13
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 2 winByMiss
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[6	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[31	] CUSTOM MESSAGE: Clan KILLERS
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[4	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[8	] CUSTOM MESSAGE: Clan 6paTBa
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[38	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[1	] CUSTOM MESSAGE: Base Parking Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan 6paTBa
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan MadeinUSSR
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan LastHope
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[33	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Clan Revolution
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[26	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[5	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[1	] CUSTOM MESSAGE: Base Fuel Station Capture
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan MadeinUSSR
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[1	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[26	] CUSTOM MESSAGE: Clan 6paTBa
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[7	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[16	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[20	] CUSTOM MESSAGE: Clan 3BEPCKueTaIIKu
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[10	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[16	] CUSTOM MESSAGE: Clan RED
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[37	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[15	] CUSTOM MESSAGE: Base Road Control Capture
+[0	] InsertStackPackets(0)
+[1	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Clan FightClub
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[5	] CUSTOM MESSAGE: Tour 2 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[4	] CUSTOM MESSAGE: Clan MadeinUSSR
+[0	] InsertStackPackets(0)
+[1	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 loseBattle
+[1	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[9	] CUSTOM MESSAGE: Clan Alcoholics
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[7	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[24	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[15	] CUSTOM MESSAGE: Clan 6paTBa
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[0	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[12	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+
+[12	] CUSTOM MESSAGE: Base Factory West Checkpoint Capture
+[0	] InsertStackPackets(0)
+[1	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Clan MadeinUSSR
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[11	] CUSTOM MESSAGE: Tour 2 winByMiss
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 3 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 4 king
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[12	] CUSTOM MESSAGE: Clan apocalypse
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 2 winBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[1	] CUSTOM MESSAGE: Tour 3 loseBattle
+[0	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[6	] CUSTOM MESSAGE: Clan Warzone2100
+[1	] InsertStackPackets(0)
+[0	] RECV_SystemMessage msg_id=99
+[24	] CUSTOM MESSAGE: Tour 2 loseBattle
