@@ -4,7 +4,6 @@
 	<meta charset="utf-8">
 	<title>Текстовое поле</title>
 	<style>
-
 	.t2 {
 		position:relative;
 		left: 450px;
@@ -37,13 +36,14 @@
 	
   			}
 
-  			var dataBasCap = [{bas:[], cap:[], loc:[], tour:[]}]
-		var lastBas1 = text1.indexOf("Base"); 
-		while (lastBas1 != -1) { 
-			dataBasCap[0].bas.push(lastBas1); 
-			var lastCap1 = text1.indexOf("Capture", lastBas1); 
-			dataBasCap[0].cap.push(lastCap1);
-			lastBas1 = text1.indexOf("Base", lastCap1); 
+  			var dataBasCap = [{bas:[], cap:[], loc:[], tour:[]}];
+  			
+		var lastBas = text1.indexOf("Base"); 
+		while (lastBas != -1) { 
+			dataBasCap[0].bas.push(lastBas); 
+			var lastCap = text1.indexOf("Capture", lastBas); 
+			dataBasCap[0].cap.push(lastCap);
+			lastBas = text1.indexOf("Base", lastCap); 
 		}
 
 		for (var i=0; i<dataBasCap[0].bas.length; i++) {
@@ -57,228 +57,89 @@
 		}
 
 		
-		var data = [{c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}, {c:[], s:[], clans:[], t:[], z:[], tours:[]}];
-
-		//Далее идет много однотипного кода, который отличается только индексом у массива data
-		//рекомендую воспользоваться циклом
+		var data = [{cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}];
 
 
-		var lastT1 = dataBasCap[0].tour[0].indexOf("Tour"); 
-		while (lastT1 != -1) { 
-			data[0].t.push(lastT1); 
-			var lastZ1 = dataBasCap[0].tour[0].indexOf("[", lastT1); 
-			data[0].z.push(lastZ1); 
-			lastT1 = dataBasCap[0].tour[0].indexOf("Tour", lastZ1); 
-		}
 
-		for (var i=0; i<data[0].t.length; i++) {
-			var sub = dataBasCap[0].tour[0].substring(data[0].t[i], data[0].z[i]);
-			data[0].tours.push(sub);
-		}
+		for(var i=0; i<dataBasCap[0].tour.length-1; i++) {
+			var lastCl = dataBasCap[0].tour[i].indexOf("Clan"); 
+			while (lastCl != -1) { 
+				data[i].cl.push(lastCl); 
+				var lastCl2 = dataBasCap[0].tour[i].indexOf("Clan", lastCl+1); 
+				data[i].cl2.push(lastCl2); 
+				lastCl = dataBasCap[0].tour[i].indexOf("Clan", lastCl2+1); 
+			}
 
-		var lastT2 = dataBasCap[0].tour[1].indexOf("Tour");
-		while (lastT2 != -1) { 
-			data[1].t.push(lastT2); 
-			var lastZ2 = dataBasCap[0].tour[1].indexOf("[", lastT2); 
-			data[1].z.push(lastZ2); 
-			lastT2 = dataBasCap[0].tour[1].indexOf("Tour", lastZ2); 
-		}
-
-		for (var i=0; i<data[1].t.length; i++) {
-			var sub = dataBasCap[0].tour[1].substring(data[1].t[i], data[1].z[i]);
-			data[1].tours.push(sub);
-		}
-
-		var lastT3 = dataBasCap[0].tour[2].indexOf("Tour");
-		while (lastT3 != -1) { 
-			data[2].t.push(lastT3); 
-			var lastZ3 = dataBasCap[0].tour[2].indexOf("[", lastT3); 
-			data[2].z.push(lastZ3); 
-			lastT3 = dataBasCap[0].tour[2].indexOf("Tour", lastZ3); 
-		}
-
-		for (var i=0; i<data[2].t.length; i++) {
-			var sub = dataBasCap[0].tour[2].substring(data[2].t[i], data[2].z[i]);
-			data[2].tours.push(sub);
+			for (var j=0; j<data[i].cl.length; j++) {
+			  var sub = dataBasCap[0].tour[i].substring(data[i].cl[j], data[i].cl2[j]);
+				data[i].cl3.push(sub);
+			}
 		}
 
 
-		var lastT4 = dataBasCap[0].tour[3].indexOf("Tour");
-		while (lastT4 != -1) { 
-			data[3].t.push(lastT4); 
-			var lastZ4 = dataBasCap[0].tour[3].indexOf("[", lastT4); 
-			data[3].z.push(lastZ4); 
-			lastT4 = dataBasCap[0].tour[3].indexOf("Tour", lastZ4); 
+
+
+
+
+
+
+
+
+
+
+
+
+		for(var i=0; i<dataBasCap[0].tour.length-1; i++) {
+			var lastT = dataBasCap[0].tour[i].indexOf("Tour"); 
+			while (lastT != -1) { 
+				data[i].t.push(lastT); 
+				var lastZ = dataBasCap[0].tour[i].indexOf("[", lastT); 
+				data[i].z.push(lastZ); 
+				lastT = dataBasCap[0].tour[i].indexOf("Tour", lastZ); 
+			}
+
+			for (var j=0; j<data[i].t.length; j++) {
+				var sub = dataBasCap[0].tour[i].substring(data[i].t[j], data[i].z[j]);
+				data[i].clans[0].tours.push(sub);
+			}
 		}
 
-		for (var i=0; i<data[3].t.length; i++) {
-			var sub = dataBasCap[0].tour[3].substring(data[3].t[i], data[3].z[i]);
-			data[3].tours.push(sub);
-		}
-
-		var lastT5 = dataBasCap[0].tour[4].indexOf("Tour");
-		while (lastT5 != -1) { 
-			data[4].t.push(lastT5); 
-			var lastZ5 = dataBasCap[0].tour[4].indexOf("[", lastT5); 
-			data[4].z.push(lastZ5); 
-			lastT5 = dataBasCap[0].tour[4].indexOf("Tour", lastZ5); 
-		}
-
-		for (var i=0; i<data[4].t.length; i++) {
-			var sub = dataBasCap[0].tour[4].substring(data[4].t[i], data[4].z[i]);
-			data[4].tours.push(sub);
-		}
-
-		var lastT6 = dataBasCap[0].tour[5].indexOf("Tour");
-		while (lastT6 != -1) { 
-			data[5].t.push(lastT6); 
-			var lastZ6 = dataBasCap[0].tour[5].indexOf("[", lastT6); 
-			data[5].z.push(lastZ6); 
-			lastT6 = dataBasCap[0].tour[5].indexOf("Tour", lastZ6); 
-		}
-
-		for (var i=0; i<data[5].t.length; i++) {
-			var sub = dataBasCap[0].tour[5].substring(data[5].t[i], data[5].z[i]);
-			data[5].tours.push(sub);
-		}
-
-		var lastT7 = dataBasCap[0].tour[6].indexOf("Tour");
-		while (lastT7 != -1) { 
-			data[6].t.push(lastT7); 
-			var lastZ7 = dataBasCap[0].tour[6].indexOf("[", lastT7); 
-			data[6].z.push(lastZ7); 
-			lastT7 = dataBasCap[0].tour[6].indexOf("Tour", lastZ7); 
-		}
-
-		for (var i=0; i<data[6].t.length; i++) {
-			var sub = dataBasCap[0].tour[6].substring(data[6].t[i], data[6].z[i]);
-			data[6].tours.push(sub);
-		}
-
-		var lastT8 = dataBasCap[0].tour[7].indexOf("Tour");
-		while (lastT8 != -1) { 
-			data[7].t.push(lastT8); 
-			var lastZ8 = dataBasCap[0].tour[7].indexOf("[", lastT8); 
-			if (lastZ8 == -1) {
+		var lastT = dataBasCap[0].tour[7].indexOf("Tour");
+		while (lastT != -1) { 
+			data[7].t.push(lastT); 
+			var lastZ = dataBasCap[0].tour[7].indexOf("[", lastT); 
+			if (lastZ == -1) {
 				break;
 			}
 			else {
-				data[7].z.push(lastZ8); 
-				lastT8 = dataBasCap[0].tour[7].indexOf("Tour", lastZ8); 
+				data[7].z.push(lastZ); 
+				lastT = dataBasCap[0].tour[7].indexOf("Tour", lastZ); 
 			}
 		}
 
 		for (var i=0; i<data[7].t.length; i++) {
 			var sub = dataBasCap[0].tour[7].substring(data[7].t[i], data[7].z[i]);
-			data[7].tours.push(sub);
-		}
-
-		//Далее идет много однотипного кода, который отличается только индексом у массива data
-		//рекомендую воспользоваться циклом
-
-		var lastC1 = dataBasCap[0].tour[0].indexOf("Clan");
-		while (lastC1 != -1) {
-			data[0].c.push(lastC1);
-			var lastS1 = dataBasCap[0].tour[0].indexOf("[", lastC1);
-			data[0].s.push(lastS1);
-			lastC1 = dataBasCap[0].tour[0].indexOf("Clan", lastS1);
-		}
-
-		for (var i=0; i<data[0].c.length; i++) {
-			var sub = dataBasCap[0].tour[0].substring(data[0].c[i], data[0].s[i]);
-			data[0].clans.push(sub);
+			data[7].clans[0].tours.push(sub);
 		}
 
 
-		var lastC2 = dataBasCap[0].tour[1].indexOf("Clan");
-		while (lastC2 != -1) {
-			data[1].c.push(lastC2);
-			var lastS2 = dataBasCap[0].tour[1].indexOf("[", lastC2);
-			data[1].s.push(lastS2);
-			lastC2 = dataBasCap[0].tour[1].indexOf("Clan", lastS2);
-		}
 
-		for (var i=0; i<data[1].c.length; i++) {
-			var sub = dataBasCap[0].tour[1].substring(data[1].c[i], data[1].s[i]);
-			data[1].clans.push(sub);
-		}
 
-		var lastC3 = dataBasCap[0].tour[2].indexOf("Clan");
-		while (lastC3 != -1) {
-			data[2].c.push(lastC3);
-			var lastS3 = dataBasCap[0].tour[2].indexOf("[", lastC3);
-			data[2].s.push(lastS3);
-			lastC3 = dataBasCap[0].tour[2].indexOf("Clan", lastS3);
-		}
 
-		for (var i=0; i<data[2].c.length; i++) {
-			var sub = dataBasCap[0].tour[2].substring(data[2].c[i], data[2].s[i]);
-			data[2].clans.push(sub);
-		}
 
-		var lastC4 = dataBasCap[0].tour[3].indexOf("Clan");
-		while (lastC4 != -1) {
-			data[3].c.push(lastC4);
-			var lastS4 = dataBasCap[0].tour[3].indexOf("[", lastC4);
-			data[3].s.push(lastS4);
-			lastC4 = dataBasCap[0].tour[3].indexOf("Clan", lastS4);
-		}
+		for (var i=0; i<dataBasCap[0].tour.length; i++) {
+			var lastC = dataBasCap[0].tour[i].indexOf("Clan");
+			while (lastC != -1) {
+				data[i].c.push(lastC);
+				var lastS = dataBasCap[0].tour[i].indexOf("[", lastC);
+				data[i].s.push(lastS);
+				lastC = dataBasCap[0].tour[i].indexOf("Clan", lastS);
+			}
 
-		for (var i=0; i<data[3].c.length; i++) {
-			var sub = dataBasCap[0].tour[3].substring(data[3].c[i], data[3].s[i]);
-			data[3].clans.push(sub);
-		}
-
-		var lastC5 = dataBasCap[0].tour[4].indexOf("Clan");
-		while (lastC5 != -1) {
-			data[4].c.push(lastC5);
-			var lastS5 = dataBasCap[0].tour[4].indexOf("[", lastC5);
-			data[4].s.push(lastS5);
-			lastC5 = dataBasCap[0].tour[4].indexOf("Clan", lastS5);
-		}
-
-		for (var i=0; i<data[4].c.length; i++) {
-			var sub = dataBasCap[0].tour[4].substring(data[4].c[i], data[4].s[i]);
-			data[4].clans.push(sub);
-		}
-
-		var lastC6 = dataBasCap[0].tour[5].indexOf("Clan");
-		while (lastC6 != -1) {
-			data[5].c.push(lastC6);
-			var lastS6 = dataBasCap[0].tour[5].indexOf("[", lastC6);
-			data[5].s.push(lastS6);
-			lastC6 = dataBasCap[0].tour[5].indexOf("Clan", lastS6);
-		}
-
-		for (var i=0; i<data[5].c.length; i++) {
-			var sub = dataBasCap[0].tour[5].substring(data[5].c[i], data[5].s[i]);
-			data[5].clans.push(sub);
-		}
-
-		var lastC7 = dataBasCap[0].tour[6].indexOf("Clan");
-		while (lastC7 != -1) {
-			data[6].c.push(lastC7);
-			var lastS7 = dataBasCap[0].tour[6].indexOf("[", lastC7);
-			data[6].s.push(lastS7);
-			lastC7 = dataBasCap[0].tour[6].indexOf("Clan", lastS7);
-		}
-
-		for (var i=0; i<data[6].c.length; i++) {
-			var sub = dataBasCap[0].tour[6].substring(data[6].c[i], data[6].s[i]);
-			data[6].clans.push(sub);
-		}
-
-		var lastC8 = dataBasCap[0].tour[7].indexOf("Clan");
-		while (lastC8 != -1) {
-			data[7].c.push(lastC8);
-			var lastS8 = dataBasCap[0].tour[7].indexOf("[", lastC8);
-			data[7].s.push(lastS8);
-			lastC8 = dataBasCap[0].tour[7].indexOf("Clan", lastS8);
-		}
-
-		for (var i=0; i<data[7].c.length; i++) {
-			var sub = dataBasCap[0].tour[7].substring(data[7].c[i], data[7].s[i]);
-			data[7].clans.push(sub);
+			for (var j=0; j<data[i].c.length; j++) {
+				var sub = dataBasCap[0].tour[i].substring(data[i].c[j], data[i].s[j]);
+				data[i].clans[0].name.push(sub);
+			}
 		}
 
 		var tour2loseB = "Tour 2 loseBattle";
@@ -304,9 +165,9 @@
 					var lose3 = " выбыли в первом туре по неявке";
 				}
 				
-				if(data[j].tours[i].indexOf("king") !=-1) {
-					newowner.push(data[j].clans[]);
-				}	
+				// if(data[j].tours[i].indexOf("king") !=-1) {
+				// 	newowner.push(data[j].clans);
+				// }	
 			}
 		}
 //Тут проблема в структуре данных
