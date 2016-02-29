@@ -57,54 +57,65 @@
 		}
 
 		
-		var data = [{cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], cl3:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}];
+		var data = [{cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}];
 
 
 
-		for(var i=0; i<dataBasCap[0].tour.length-1; i++) {
+		for(var i=0; i<dataBasCap[0].tour.length; i++) {
 			var lastCl = dataBasCap[0].tour[i].indexOf("Clan"); 
 			while (lastCl != -1) { 
 				data[i].cl.push(lastCl); 
 				var lastCl2 = dataBasCap[0].tour[i].indexOf("Clan", lastCl+1); 
-				data[i].cl2.push(lastCl2); 
-				lastCl = dataBasCap[0].tour[i].indexOf("Clan", lastCl2+1); 
+				if (lastCl2 !=-1) {
+					data[i].cl.push(lastCl2); 
+					lastCl = dataBasCap[0].tour[i].indexOf("Clan", lastCl2+1); 
+				}
+				else {
+					break;
+				}
 			}
 
 			for (var j=0; j<data[i].cl.length; j++) {
-			  var sub = dataBasCap[0].tour[i].substring(data[i].cl[j], data[i].cl2[j]);
-				data[i].cl3.push(sub);
+			 var sub = dataBasCap[0].tour[i].substring(data[i].cl[j], data[i].cl[j+1]);
+				data[i].cl2.push(sub);
 			}
 		}
 
+			//Дальше мрак...
 
+		for (var t = 0; t<data[t].cl2.length; t++)	{
+			for(var i=0; i<data[t].cl2.length; i++) {
+				var lastT = data[t].cl2[i].indexOf("Tour"); 
+				while (lastT != -1) { 
+					data[t].t.push(lastT); 
+					var lastZ = data[t].cl2[i].indexOf("[", lastT); 
+					data[t].z.push(lastZ); 
+					lastT = data[t].cl2[i].indexOf("Tour", lastZ); 
+				}
 
-
-
-
-
-
-
-
-
-
-
-
-		for(var i=0; i<dataBasCap[0].tour.length-1; i++) {
-			var lastT = dataBasCap[0].tour[i].indexOf("Tour"); 
-			while (lastT != -1) { 
-				data[i].t.push(lastT); 
-				var lastZ = dataBasCap[0].tour[i].indexOf("[", lastT); 
-				data[i].z.push(lastZ); 
-				lastT = dataBasCap[0].tour[i].indexOf("Tour", lastZ); 
-			}
-
-			for (var j=0; j<data[i].t.length; j++) {
-				var sub = dataBasCap[0].tour[i].substring(data[i].t[j], data[i].z[j]);
-				data[i].clans[0].tours.push(sub);
+				for (var j=0; j<data[t].t.length; j++) {
+					var sub = data[t].cl2[i].substring(data[t].t[j], data[t].z[j]);
+					data[t].clans[0].tours.push(sub);
+				}
 			}
 		}
 
-		var lastT = dataBasCap[0].tour[7].indexOf("Tour");
+		//Конец.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		var lastT = data[i].cl2[7].indexOf("Tour");
 		while (lastT != -1) { 
 			data[7].t.push(lastT); 
 			var lastZ = dataBasCap[0].tour[7].indexOf("[", lastT); 
