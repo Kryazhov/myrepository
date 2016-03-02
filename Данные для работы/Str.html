@@ -57,7 +57,7 @@
 		}
 
 		
-		var data = [{cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}];
+		var data = [{cl:[], cl2:[], c:[], s:[], clans:[], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}, {cl:[], cl2:[], c:[], s:[], clans:[{name:[], tours:[]}], t:[], z:[]}];
 
 
 
@@ -81,7 +81,6 @@
 			}
 		}
 
-			//Дальше мрак...
 
 		for (var t = 0; t<data[t].cl2.length; t++)	{
 			for(var i=0; i<data[t].cl2.length; i++) {
@@ -95,63 +94,29 @@
 
 				for (var j=0; j<data[t].t.length; j++) {
 					var sub = data[t].cl2[i].substring(data[t].t[j], data[t].z[j]);
-					data[t].clans[0].tours.push(sub);
+					data[t].clans.push({tours:sub});
 				}
 			}
 		}
 
-		//Конец.
 
+		for (var t = 0; t<data[t].cl2.length; t++) {
+			for (var i=0; i<data[t].cl2.length; i++) {
+				var lastC = data[t].cl2[i].indexOf("Clan");
+				while (lastC != -1) {
+					data[t].c.push(lastC);
+					var lastS = data[t].cl2[i].indexOf("[", lastC);
+					data[t].s.push(lastS);
+					lastC = data[t].cl2[i].indexOf("Clan", lastS);
+				}
 
-
-
-
-
-
-
-
-
-
-
-
-
-		var lastT = data[i].cl2[7].indexOf("Tour");
-		while (lastT != -1) { 
-			data[7].t.push(lastT); 
-			var lastZ = dataBasCap[0].tour[7].indexOf("[", lastT); 
-			if (lastZ == -1) {
-				break;
-			}
-			else {
-				data[7].z.push(lastZ); 
-				lastT = dataBasCap[0].tour[7].indexOf("Tour", lastZ); 
+				for (var j=0; j<data[t].c.length; j++) {
+					var sub = data[t].cl2[i].substring(data[t].c[j], data[t].s[j]);
+					data[t].clans.push({name:sub});
+				}
 			}
 		}
-
-		for (var i=0; i<data[7].t.length; i++) {
-			var sub = dataBasCap[0].tour[7].substring(data[7].t[i], data[7].z[i]);
-			data[7].clans[0].tours.push(sub);
-		}
-
-
-
-
-
-
-		for (var i=0; i<dataBasCap[0].tour.length; i++) {
-			var lastC = dataBasCap[0].tour[i].indexOf("Clan");
-			while (lastC != -1) {
-				data[i].c.push(lastC);
-				var lastS = dataBasCap[0].tour[i].indexOf("[", lastC);
-				data[i].s.push(lastS);
-				lastC = dataBasCap[0].tour[i].indexOf("Clan", lastS);
-			}
-
-			for (var j=0; j<data[i].c.length; j++) {
-				var sub = dataBasCap[0].tour[i].substring(data[i].c[j], data[i].s[j]);
-				data[i].clans[0].name.push(sub);
-			}
-		}
+		
 
 		var tour2loseB = "Tour 2 loseBattle";
 		var tour2loseBM = "Tour 2 loseByMiss";
